@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <div class="container">
+        <h1>Form Validation</h1>
+        <form 
+            name="numberFun"
+            class="needs-validation"
+            onsubmit="validate()"
+            onreset="resetView()"
+            novalidate
+        >
+        <div class="form-row">
+            <div class="form-group col">
+                <label for="num1">Num 1</label>
+                <input type="number" class="form-control" id="num1" required>
+            </div>
+            <div class="form-group col">
+                <label for="num2">Num 2</label>
+                <input type="number" class="form-control" id="num2" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <button type="submit" id="submitButton" class="btn btn-primary">Calculate</button>
+                <button type="reset" id="submitButton" class="btn btn-secondary">Reset</button>
+
+            </div>
+        </div>
+        </form>
+
+        <table id="results" class="table table-striped" ">
+            <thead>
+                <tr>
+                    <th>Operation</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Addition (+)</td>
+                    <td><span id="addResult"></span></td>
+                </tr>
+                <tr>
+                    <td>Subtraction (-)</td>
+                    <td><span id="subtractResult"></span></td>
+                </tr>
+                <tr>
+                    <td>Multiplication (*)</td>
+                    <td><span id="multiplyResult"></span></td>
+                </tr>
+                <tr>
+                    <td>Division (/)</td>
+                    <td><span id="divideResult"></span></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+    <div>
+        <h2 class="title"> Todo Detail</h2>
+        <hr>
+        <div><h3>{{ todo.title }}</h3></div>
+        <div>
+            <strong>Is done:</strong> {{ todo.is_done }}
+            <strong>Description:</strong> {{ todo.description }}
+        </div>
+    </div>
+
+    {% endblock %}

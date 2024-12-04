@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Form</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form id="calculator-form">
+        <label for="number1">Number 1:</label>
+        <input type="text" id="number1" name="number1">
+        <span id="error1" class="error"></span><br><br>
+
+        <label for="number2">Number 2:</label>
+        <input type="text" id="number2" name="number2">
+        <span id="error2" class="error"></span><br><br>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+        <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+
+    <h2>Results</h2>
+    <div id="results-container"></div>
+
+</body>
+<script src="app.js"></script>
+</html>

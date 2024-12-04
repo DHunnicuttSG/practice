@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title">Todos</h1>
+
+    <hr>
+
+    <form method="POST">
+        <!--  built-in security from Django -->
+        {% csrf_token %}
+        <!-- Show the form as a paragraph -->
+        {{ form.as_p }}
+
+        <button class="button">Submit</button>
+    </form>
+</div>
+
+<hr>
+
+<!-- loop through the todos here -->
+<!-- todos in for loop is reference to variable in views -->
+    {% for todo in todos %}
+        <p><a href="{% url 'todo' todo.id %}">{{ todo.title }}</a> </p>
+    {% empty %}
+        <p>There are no todos</p>
+    {% endfor %}
+
+{% endblock %}

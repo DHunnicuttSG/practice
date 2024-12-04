@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}New Contact{% endblock %}
+
+{% block content %}
+    <h2>
+        {% if form.instance.pk %} Edit {% else %} New {% endif %} Contact
+    </h2>
+    <form method="post" class="scrollable-form">
+        {% csrf_token %}
+        <div class="container">
+            <div class="column">
+                <p>First Name: </p>
+                <p>Last Name: </p>
+                <p>Email: </p>
+                <p>Phone: </p>
+            </div>
+            <div class="column">
+                <p>{{ form.first_name }}</p>
+                <p>{{ form.last_name }}</p>
+                <p>{{ form.email }}</p>
+                <p>{{ form.phone_number }}</p>
+            </div>
+        </div>
+
+
+
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}

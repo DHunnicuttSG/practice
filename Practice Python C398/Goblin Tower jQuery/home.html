@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Goblin Tower</title>
+  <style>
+    .goblin {
+      width: 64px;
+      height: 64px;
+      background: url('https://opengameart.org/sites/default/files/goblin_0.png') 0 0;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 text-center">
+        <h1>Goblin Tower</h1>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div style=" height: 600px;">
+          <div class="characterInfo float-left">
+            <p><button class="btn btn-success" id="renameHeroBtn">Rename Hero</button></p>
+            <p class="characterName">Name: <span id="Name">Bob</span></p>
+            <p class="characterRace">Race: <span id="Race">Human</span></p>
+            <p class="characterClass">Class: <span id="Class">Warrior</span></p>
+            <p class="characterHealth">Health: <span id="currentHealth">20</span>/<span id="maxHealth">20</span></p>
+            <p class="characterGold">Gold: <span id="gold">20</span></p>
+            <p class="characterLvl">Level: <span id="level">0</span></p>
+            <p class="characterSteps">Steps: <span id="steps">0</span></p>
+            <p class="characterPotions">Potion Belt: <span id="potions">0</span></p>
+            <div style="overflow:hidden; height:300px;"><p id="message" ></p></div>
+          </div>
+          <div class="goblin float-right" id="goblinCharacter"></div>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div style="border:black solid 1px; height: 600px; padding:20px;">
+
+
+          <p>
+            Instructions: <br />The game is simple, the player starts with 20 health points and will take a “step”. Each
+            step has a chance for the player to encounter a goblin. When the player encounters a goblin. They’ll lose 2
+            points of health and gain 5 pieces of gold. Once the player reaches 10 steps, they have conquered a floor of
+            our tower. After every odd floor conquered, they’ll be allowed to buy a potion for 10 gold pieces. We’ll
+            keep the potions in a potion belt that a player can drink restoring their health by 1pt. Once the player
+            losses all their health points, the game will be over.
+          </p>
+
+          <button class="btn btn-primary" id="stepForward">Step Forward</button>
+          <button class="btn btn-success" id="buyPotionbtn">Buy Potion</button>
+          <button class="btn btn-danger" id="fightGoblinBtn">Fight Goblin</button>
+          <button class="btn btn-success" id="drinkPotionBtn">Drink Potion</button>
+          <button class="btn btn-danger" id="startOverBtn">Start Over</button>
+        </div>
+        <div class="col-md-6">
+          <p id="postedGoblinHealth"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
