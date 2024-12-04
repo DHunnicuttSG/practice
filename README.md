@@ -1,1 +1,1 @@
-# practice Python / Django / React for C398
+# Practice Python / Django / React for C398
